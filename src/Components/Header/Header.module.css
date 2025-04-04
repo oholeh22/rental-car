@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 26px 120px;
+  background-color: #f2f4f7;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo span:first-child {
+  color: black;
+}
+
+.logo span:last-child {
+  color: blue;
+}
+
+.navLink {
+  margin-left: 32px;
+  font-size: 16px;
+  text-decoration: none;
+  color: #101828;
+  font-weight: 500;
+  padding: 24px 0;
+}
+
+.navLink:hover {
+  text-decoration: underline;
+}
+
+.active {
+  color: #0b44cd;
+}
