@@ -1,0 +1,249 @@
+.detailsContainer {
+  display: flex;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: sans-serif;
+  font-family: "Manrope", sans-serif;
+}
+
+.leftColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.carImage {
+  width: 640px;
+  height: 512px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.bookingForm {
+  background-color: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #dadde1;
+}
+
+.bookingForm h3 {
+  font-family: "Manrope", sans-serif;
+  margin-bottom: 12px;
+  font-size: 20px;
+}
+
+.bookingForm form {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bookingFormPar {
+  font-size: 16px;
+  color: #8d929a;
+  margin-bottom: 24px;
+}
+
+.bookingForm input {
+  background-color: #f7f7f7;
+  padding: 14px 20px;
+  border: transparent;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: "Manrope", sans-serif;
+}
+
+.bookingForm button {
+  background-color: #3470ff;
+  font-family: "Manrope", sans-serif;
+  width: 156px;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 14px;
+  margin: 24px auto 0;
+}
+
+.bookingForm button:hover {
+  background-color: #0b44cd;
+}
+
+.rightColumn {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+}
+
+.carTitle {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.carId {
+  font-size: 14px;
+  color: #666;
+}
+
+.metaRow {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  color: #101828;
+}
+
+.locationContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.locationIcon {
+  fill: #101828;
+}
+
+.locationText {
+  font-size: 14px;
+  color: #101828;
+}
+
+.price {
+  color: #3470ff;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.description {
+  font-size: 14px;
+  color: #101828;
+  line-height: 1.4;
+  margin-bottom: 68px;
+}
+
+.rentalConditions,
+.specifications,
+.accessories {
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.rentalConditions h3,
+.specifications h3,
+.accessories h3 {
+  margin-top: 0;
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+.rentalConditions ul,
+.specifications ul,
+.accessories ul {
+  margin: 0;
+  list-style: none;
+}
+
+.loading,
+.error {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.listWithIcons {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.listWithIcons li {
+  position: relative;
+  padding-left: 24px;
+}
+
+.listWithIcons li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url("/assets/check-circle.svg") no-repeat center;
+  background-size: contain;
+}
+
+.specList {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.specList li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 8px;
+}
+
+.specList li:nth-of-type(1)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url("/assets/calendar.svg") no-repeat center;
+  background-size: contain;
+}
+
+.specList li:nth-of-type(2)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url("/assets/car.svg") no-repeat center;
+  background-size: contain;
+}
+
+.specList li:nth-of-type(3)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url("/public/assets/fuel-pump.svg") no-repeat center;
+  background-size: contain;
+}
+
+.specList li:nth-of-type(4)::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  background: url("/assets/gear.svg") no-repeat center;
+  background-size: contain;
+}

@@ -60,7 +60,6 @@ img {
 }
 
 button {
-  background-color: #007bff;
   border: none;
   padding: 10px 20px;
   color: #fff;
@@ -68,6 +67,3 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: #0056b3;
-}
