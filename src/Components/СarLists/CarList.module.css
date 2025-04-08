@@ -1,29 +1,58 @@
 .carListContainer {
-    margin-top: 20px;
-    text-align: center;
-  }
-  
+  margin-top: 20px;
+  text-align: center;
+}
+
+.carGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 48px;
+  column-gap: 32px;
+  padding: 0 120px;
+}
+
+.loadMoreButton {
+  margin-top: 20px;
+  padding: 12px 24px;
+  background-color: #3470ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.loadMoreButton:hover {
+  background-color: #0b44cd;
+}
+
+@media (max-width: 767px) {
   .carGrid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: 48px;
-column-gap: 32px;
-    padding: 0 120px;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    row-gap: 32px;
   }
-  
+
   .loadMoreButton {
-    margin-top: 20px;
-    padding: 12px 24px;
-    background-color: #3470FF;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
   }
-  
-  .loadMoreButton:hover {
-    background-color: #0B44CD;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .carGrid {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    column-gap: 24px;
   }
-  
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .carGrid {
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 80px;
+    column-gap: 28px;
+  }
+}

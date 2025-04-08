@@ -114,3 +114,55 @@
 .readMore:focus {
   background-color: #0b44cd;
 }
+
+@media (max-width: 767px) {
+  .card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .imgCont {
+    max-width: 100%;
+  }
+
+  .readMore {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .card {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+
+  .imgCont {
+    max-width: 100%;
+  }
+
+  .readMore {
+    width: 100%;
+    padding: 12px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card {
+    width: 260px;
+    height: 420px;
+  }
+
+  .imgCont {
+    max-width: 260px;
+  }
+
+  .readMore {
+    padding: 12px 80px;
+  }
+}
+

@@ -43,3 +43,67 @@
   background-color: #0b44cd;
   text-decoration: none;
 }
+
+@media (max-width: 767px) {
+  .hero {
+    height: 500px;
+    padding-bottom: 40px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+
+  .subtitle {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+
+  .button {
+    width: 100%;
+    max-width: 260px;
+    padding: 12px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    height: 600px;
+    padding-bottom: 50px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .button {
+    width: 260px;
+    padding: 12px 60px;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .hero {
+    height: 650px;
+    padding-bottom: 60px;
+  }
+
+  .title {
+    font-size: 56px;
+  }
+
+  .subtitle {
+    font-size: 22px;
+  }
+
+  .button {
+    width: 270px;
+    padding: 12px 80px;
+  }
+}
