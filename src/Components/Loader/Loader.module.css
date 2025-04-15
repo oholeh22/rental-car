@@ -1,44 +1,72 @@
-.loader{
-    width: 40px;
-    aspect-ratio: 1;
-    --c:no-repeat linear-gradient(#000 0 0);
-    background: 
-      var(--c) 0    0,
-      var(--c) 0    100%, 
-      var(--c) 50%  0,  
-      var(--c) 50%  100%, 
-      var(--c) 100% 0, 
-      var(--c) 100% 100%;
-    background-size: 8px 50%;
-    animation: l7-0 1s infinite;
-    position: relative;
-    overflow: hidden;
-  }
-  .loader:before {
-    content: "";
+.loader {
+  transform: rotateZ(45deg);
+  perspective: 1000px;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  color: #fff;
+}
+  .loader:before,
+  .loader:after {
+    content: '';
+    display: block;
     position: absolute;
-    width: 8px;
-    height: 8px;
+    top: 0;
+    left: 0;
+    width: inherit;
+    height: inherit;
     border-radius: 50%;
-    background: #000;
-    top: calc(50% - 4px);
-    left: -8px;
-    animation: inherit;
-    animation-name: l7-1;
+    transform: rotateX(70deg);
+    animation: 1s spin linear infinite;
   }
-  
-  @keyframes l7-0 {
-   16.67% {background-size:8px 30%, 8px 30%, 8px 50%, 8px 50%, 8px 50%, 8px 50%}
-   33.33% {background-size:8px 30%, 8px 30%, 8px 30%, 8px 30%, 8px 50%, 8px 50%}
-   50%    {background-size:8px 30%, 8px 30%, 8px 30%, 8px 30%, 8px 30%, 8px 30%}
-   66.67% {background-size:8px 50%, 8px 50%, 8px 30%, 8px 30%, 8px 30%, 8px 30%}
-   83.33% {background-size:8px 50%, 8px 50%, 8px 50%, 8px 50%, 8px 30%, 8px 30%}
+  .loader:after {
+    color: #FF3D00;
+    transform: rotateY(70deg);
+    animation-delay: .4s;
   }
-  
-  @keyframes l7-1 {
-   20%  {left:0px}
-   40%  {left:calc(50%  - 4px)}
-   60%  {left:calc(100% - 8px)}
-   80%,
-   100% {left:100%}
+
+@keyframes rotate {
+  0% {
+    transform: translate(-50%, -50%) rotateZ(0deg);
   }
+  100% {
+    transform: translate(-50%, -50%) rotateZ(360deg);
+  }
+}
+
+@keyframes rotateccw {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(-360deg);
+  }
+}
+
+@keyframes spin {
+  0%,
+  100% {
+    box-shadow: .2em 0px 0 0px currentcolor;
+  }
+  12% {
+    box-shadow: .2em .2em 0 0 currentcolor;
+  }
+  25% {
+    box-shadow: 0 .2em 0 0px currentcolor;
+  }
+  37% {
+    box-shadow: -.2em .2em 0 0 currentcolor;
+  }
+  50% {
+    box-shadow: -.2em 0 0 0 currentcolor;
+  }
+  62% {
+    box-shadow: -.2em -.2em 0 0 currentcolor;
+  }
+  75% {
+    box-shadow: 0px -.2em 0 0 currentcolor;
+  }
+  87% {
+    box-shadow: .2em -.2em 0 0 currentcolor;
+  }
+}

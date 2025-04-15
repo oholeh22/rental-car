@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import CarCard from "../CarItem/CarItem";
 import { fetchCars } from "../../redux/cars/operations/fetchCars";
+import { setPage } from "../../redux/cars/slice"; 
 import {
   selectCarList,
   selectCurrentPage,
@@ -25,7 +26,9 @@ const CarList = () => {
   }, [dispatch, filters]);
 
   const handleLoadMore = () => {
-    dispatch(fetchCars({ page: currentPage + 1, filters }));
+    const nextPage = currentPage + 1;
+    dispatch(setPage(nextPage));
+    dispatch(fetchCars({ page: nextPage, filters }));
   };
 
   const filteredCars = filters.price
@@ -34,9 +37,7 @@ const CarList = () => {
 
   return (
     <div className={s.carListContainer}>
-      {loading ? (
-        <Loader />
-      ) : filteredCars.length === 0 ? (
+      {filteredCars.length === 0 && !loading ? (
         <p>No available cars</p>
       ) : (
         <div className={s.carGrid}>
@@ -45,8 +46,11 @@ const CarList = () => {
           ))}
         </div>
       )}
+
+      {loading && <Loader />}
+
       {hasMore && !loading && (
-        <button className={s.loadMoreButton} onClick={handleLoadMore}>
+        <button type="button" className={s.loadMoreButton} onClick={handleLoadMore}>
           Load More
         </button>
       )}

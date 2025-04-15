@@ -11,7 +11,7 @@ const carSlice = createSlice({
     },
     setFilters: (state, action) => {
       state.filters = action.payload;
-      state.carList = [];
+      state.carList = []; 
       state.page = 1;
     },
   },
@@ -24,8 +24,11 @@ const carSlice = createSlice({
       .addCase(fetchCars.fulfilled, (state, action) => {
         const { cars, totalPages, totalCars } = action.payload;
         state.loading = false;
-
-        state.carList = [...state.carList, ...cars];
+        if (state.page === 1) {
+          state.carList = cars;
+        } else {
+          state.carList = [...state.carList, ...cars];
+        }
         state.totalCars = totalCars;
         state.totalPages = totalPages;
       })
