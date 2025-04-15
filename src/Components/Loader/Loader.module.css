@@ -1,3 +1,11 @@
+.loaderWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;  /* или укажите конкретную ширину */
+  height: 100vh;
+}
+
 .loader {
   transform: rotateZ(45deg);
   perspective: 1000px;
